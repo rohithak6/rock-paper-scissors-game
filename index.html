@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang-"en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+             content="width=device-width,initial-scale=1.0">
+        <title>Rock Paper Scissors | 👤 HUMAN vs EVIL ROBOT 🤖</title>
+        <link rel="stylesheet" href="rps.css">
+    </head>
+    <body>
+        <div class="game-container">
+
+        <!--game heading-->
+        <header>
+            <p class="subtitle">THE ULTIMATE BATTLE</p>
+            <h1>
+                ROCK PAPER SCISSORS
+            </h1>
+            <p class="tagline">
+                HUMAN <span>VS</span> EVIL ROBOT
+            </p>
+        </header>
+
+        <!--scoreboard-->
+        <section class="scoreboard">
+
+        <div class="score-card human-card">
+            <p>HUMAN</p>
+            <h2 id="player-score">0</h2>
+            <span>YOUR SCORE</span>
+        </div>
+
+        <div class="score-card draw-card">
+            <p>DRAWS</p>
+            <h2 id="draw-score">0</h2>
+            <span>TIE ROUNDS</span>
+        </div>
+
+        <div class="score-card robot-card">
+            <p>ROBOT</p>
+            <h2 id="computer-score">0</h2>
+            <span>ROBOT SCORE</span>
+        </div>
+
+        </section>
+
+        <!--battle area-->
+        <section class="battle-arena">
+
+            <div class="fighter">
+                <div class="fighter-icon human-icon">👨‍💻</div>
+                <h3>YOU</h3>
+                <p id="player-choice">Ready to fight?</p>
+            </div>
+
+            <div class="versus">VS</div>
+
+            <div class="fighter">
+                <div class="fighter-icon robot-icon">🤖</div>
+                <h3>EVIL ROBOT</h3>
+                <p id="computer-choice">I'll defeat you!</p>
+            </div>
+        </section>
+
+        <!--result area-->
+        <div class="result-box" aria-live=""polite>
+            <h2 id="result">CHOOSE YOUR WEAPON</h2>
+            <p id="robot-message">
+                Prepare yourself,human.
+                My circuits are ready!
+            </p>
+        </div>
+
+        <!--weapon selection-->
+        <section class="weapons">
+            <h2>SELECT YOUR WEAPON</h2>
+            <div class="weapon-bottons">
+
+                <button class="weapon rock" data-choice="rock">
+                    <span class="weapon-icon">✊</span>
+                    <span>ROCK</span>
+                </button>
+
+                <button class="weapon paper" data-choice="paper">
+                    <span class="weapon-icon">✋</span>
+                    <span>PAPER</span>
+                </button>
+
+                <button class="weapon scissors" data-choice="scissors">
+                    <span class="weapon-icon">✌️</span>
+                    <span>SCISSORS</span>
+                </button>
+
+            </div>
+        </section>
+
+        <!--game control-->
+        <div class="controls">
+            <button id="reset-button">↻ RESET GAME</button>
+        </div>
+
+        <footer>
+            <p>BUILD BY A HUMAN. POWERED BY CODE.</p>
+            <p class="footer">Can you defeat the Evil Robot?</p>
+        </footer>
+
+        </div>
+
+        <script src="rps.js"></script>
+
+    </body>
+</html>

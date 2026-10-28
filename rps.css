@@ -1,0 +1,392 @@
+/* General Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+
+    background:
+        radial-gradient(circle at top left, #192747, transparent 40%),
+        radial-gradient(circle at bottom right, #35152c, transparent 40%),
+        #080b14;
+
+    color: #ffffff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px 15px;
+}
+
+/* Main Game Container */
+
+.game-container {
+    width: 100%;
+    max-width: 850px;
+
+    background: rgba(17, 23, 40, 0.92);
+
+    border: 1px solid #29334d;
+    border-radius: 22px;
+
+    padding: 35px;
+
+    box-shadow: 0 0 50px rgba(0, 140, 255, 0.08);
+}
+
+/* Header */
+
+header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.subtitle {
+    color: #00d9ff;
+    font-size: 12px;
+    letter-spacing: 5px;
+    margin-bottom: 12px;
+}
+
+h1 {
+    font-size: clamp(25px, 5vw, 42px);
+    line-height: 1.3;
+    font-weight: 900;
+}
+
+h1 span {
+    color: #ff416c;
+}
+
+.tagline {
+    margin-top: 12px;
+    color: #b4bdd2;
+    letter-spacing: 4px;
+    font-size: 13px;
+}
+
+.tagline span {
+    color: #00d9ff;
+    font-weight: bold;
+}
+
+/* Scoreboard */
+
+.scoreboard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.score-card {
+    padding: 20px 10px;
+    text-align: center;
+
+    background: #111a2d;
+    border: 1px solid #283651;
+    border-radius: 14px;
+}
+
+.score-card p {
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.score-card h2 {
+    font-size: 38px;
+    margin: 10px 0;
+}
+
+.score-card span {
+    color: #929db5;
+    font-size: 10px;
+}
+
+.human-card h2 {
+    color: #00d9ff;
+}
+
+.draw-card h2 {
+    color: #f5c451;
+}
+
+.robot-card h2 {
+    color: #ff416c;
+}
+
+/* Battle Arena */
+
+.battle-arena {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    padding: 30px 10px;
+
+    background: #0b1020;
+    border: 1px solid #202b43;
+    border-radius: 18px;
+}
+
+.fighter {
+    text-align: center;
+    width: 40%;
+}
+
+.fighter-icon {
+    width: 95px;
+    height: 95px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 45px;
+    margin: 0 auto 15px;
+
+    border-radius: 22px;
+}
+
+.human-icon {
+    background: #102b40;
+    border: 1px solid #00bfff;
+}
+
+.robot-icon {
+    background: #351525;
+    border: 1px solid #ff416c;
+}
+
+.fighter h3 {
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.fighter p {
+    color: #aeb9d0;
+    font-size: 13px;
+    min-height: 18px;
+    overflow-wrap: anywhere;
+}
+
+.versus {
+    font-size: 20px;
+    font-weight: 900;
+    color: #ff416c;
+    font-style: italic;
+}
+
+/* Result Box */
+
+.result-box {
+    text-align: center;
+    padding: 25px 10px;
+}
+
+.result-box h2 {
+    color: #00d9ff;
+    font-size: clamp(18px, 3vw, 25px);
+    margin-bottom: 10px;
+}
+
+.result-box p {
+    color: #b4bdd2;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Weapon Selection */
+
+.weapons {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.weapons h2 {
+    font-size: 14px;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.weapon-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.weapon {
+    width: 145px;
+    min-height: 120px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    background: #151d30;
+    color: white;
+
+    border: 1px solid #303c57;
+    border-radius: 16px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+    letter-spacing: 2px;
+
+    transition: 0.25s ease;
+}
+
+.weapon-icon {
+    font-size: 36px;
+}
+
+.rock:hover {
+    border-color: #00d9ff;
+    box-shadow: 0 0 22px rgba(0, 217, 255, 0.2);
+}
+
+.paper:hover {
+    border-color: #f5c451;
+    box-shadow: 0 0 22px rgba(245, 196, 81, 0.2);
+}
+
+.scissors:hover {
+    border-color: #ff416c;
+    box-shadow: 0 0 22px rgba(255, 65, 108, 0.2);
+}
+
+.weapon:hover {
+    transform: translateY(-6px);
+}
+
+.weapon:active {
+    transform: scale(0.96);
+}
+
+button:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 4px;
+}
+
+/* Reset Button */
+
+.controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+#reset-button {
+    background: transparent;
+    color: #ff6689;
+
+    border: 1px solid #ff416c;
+    border-radius: 8px;
+
+    padding: 12px 22px;
+
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    transition: 0.25s ease;
+}
+
+#reset-button:hover {
+    background: #ff416c;
+    color: white;
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    margin-top: 35px;
+    padding-top: 20px;
+
+    border-top: 1px solid #28334b;
+}
+
+footer p {
+    color: #00d9ff;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.footer-small {
+    margin-top: 10px;
+    color: #7f8ba5;
+}
+
+/* Mobile Responsive Design */
+
+@media (max-width: 550px) {
+
+    .game-container {
+        padding: 22px 15px;
+    }
+
+    .scoreboard {
+        gap: 6px;
+    }
+
+    .score-card {
+        padding: 15px 5px;
+    }
+
+    .score-card p {
+        font-size: 10px;
+    }
+
+    .score-card h2 {
+        font-size: 29px;
+    }
+
+    .score-card span {
+        font-size: 8px;
+    }
+
+    .fighter-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 35px;
+    }
+
+    .fighter h3 {
+        font-size: 11px;
+    }
+
+    .fighter p {
+        font-size: 11px;
+    }
+
+    .weapon-buttons {
+        gap: 8px;
+    }
+
+    .weapon {
+        width: 33.33%;
+        min-height: 100px;
+        font-size: 11px;
+        letter-spacing: 1px;
+    }
+
+    .weapon-icon {
+        font-size: 30px;
+    }
+
+    .subtitle {
+        letter-spacing: 3px;
+    }
+}
